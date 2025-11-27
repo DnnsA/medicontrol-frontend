@@ -27,12 +27,12 @@ export interface WeeklyPlanRequest {
 }
 
 export const getWeeklyPlanManual = async (request: WeeklyPlanRequest): Promise<WeeklyPlanResponse> => {
-    const token = localStorage.getItem('token'); // ← Obtén el token
+    const token = localStorage.getItem('token'); 
   
     const response = await axios.post(`${API_BASE_URL}/api/FoodRecommendation/weekly-plan-manual`, request, {
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`, // ← Envía el token
+        'Authorization': `Bearer ${token}`, 
       },
     });
   
